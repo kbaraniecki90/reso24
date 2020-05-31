@@ -6,7 +6,7 @@ const Osrodek = () => {
         {console.log('osrodek')}
         <h1>Osrodek</h1>
         </>
-        );
+    );
 }
 
 export { Osrodek };

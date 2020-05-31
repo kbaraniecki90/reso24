@@ -4,15 +4,19 @@ import User from '../user/User'
 
 const Header = () => {
     return (
-        <header id="header" className="container-fluid">
-            {/* Wywołanie Logo -> statyczne */}
-            <img src="https://picsum.photos/200/100" alt="" title="" />
+        <header id="header" className="container-fluid ">
+            <div className="row">
+                {/* Wywołanie Logo -> statyczne */}
+                <div className="col-4">
+                    <img src="logo.svg" alt="" title="" className="img-fluid" />
+                </div>
 
-            {/* Wywołanie nawigacji */}
-            <Nav />
+                {/* Wywołanie nawigacji */}
+                <Nav />
 
-            {/* Profil użytkownika */}
-            <User />
+                {/* Profil użytkownika */}
+                <User />
+            </div>
         </header>
     );
 }

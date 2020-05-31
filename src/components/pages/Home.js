@@ -7,7 +7,7 @@ class Home extends React.Component {
     render() {
         return (
             <>
-                <h1>Lista podopiecznych: [refresh]</h1>
+                <h1>Lista podopiecznych:</h1>
                 <GetStudents view='list'/>
             </>
         );

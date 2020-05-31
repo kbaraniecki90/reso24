@@ -1,0 +1,20 @@
+.liststudents{
+    .student{
+        padding: .7rem;
+        background-color: $color-primary;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+        color: white;
+        &:last-child{
+            margin-bottom: 0;
+        }
+
+        &__image{
+            img{
+                border-radius: 50%;
+                width: 47px;
+                height: auto;
+            }
+        }
+    }
+}

@@ -15,7 +15,9 @@ window.students = null;
 ReactDOM.render(
     <React.StrictMode>
         <Router>
-            <Header />
+            <div>
+                <Header />
+            </div>
             <main className="container-fluid">
                 <Main />
             </main>

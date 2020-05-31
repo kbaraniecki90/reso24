@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="225.263" height="131.578" viewBox="0 0 225.263 131.578">
+  <g id="logo" transform="translate(1.263 58.481)">
+    <text id="_24" data-name="24" transform="translate(163 -24.481)" fill="#fff" font-size="31" font-family="SegoeScript, Segoe Script"><tspan x="0" y="0">24</tspan></text>
+    <path id="R" d="M118.974-700.638c43.264-25.315,129.708-43.527,135.625-5.319,0,35.247-130.415,22.937-130.415,22.937l117.8,27.923" transform="translate(-118.974 680.908)" fill="none" stroke="#fff" stroke-width="5"/>
+    <path id="Path_8" data-name="Path 8" d="M.651,7.265s5.568,5.077,28.993,13C53.357,27.427,27.7-1.21,16.9.04S-3.86,10.068,1.491,19.13c3.5,5.979,10.155,9.162,20.1,12.165.687.218,2.884.814,5.176,1.406.208.058,1.84.463,3.484.872" transform="translate(46.73 45.779) rotate(-45)" fill="none" stroke="#fff" stroke-width="5"/>
+    <path id="Path_9" data-name="Path 9" d="M18.379,0,87.02,24.469S25.91,52.6,0,10.165" transform="translate(113.815 30.272) rotate(-7)" fill="none" stroke="#fff" stroke-width="5"/>
+    <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(188 13.519)" fill="none" stroke="#fff" stroke-width="5">
+      <ellipse cx="18" cy="9.5" rx="18" ry="9.5" stroke="none"/>
+      <ellipse cx="18" cy="9.5" rx="15.5" ry="7" fill="none"/>
+    </g>
+    <line id="Line_2" data-name="Line 2" x1="66.428" y2="91.413" transform="translate(1.384 -29.398)" fill="none" stroke="#fff" stroke-width="5"/>
+  </g>
+</svg>
