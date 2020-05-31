@@ -7,7 +7,7 @@ const Header = () => {
         <header id="header" className="container-fluid ">
             <div className="row">
                 {/* Wywołanie Logo -> statyczne */}
-                <div className="col-4">
+                <div className="col-4 d-flex align-items-center">
                     <img src="logo.svg" alt="" title="" className="img-fluid" />
                 </div>
 
