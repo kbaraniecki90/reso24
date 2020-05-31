@@ -65,7 +65,7 @@ class ListStudents extends React.Component {
                                 <h2 className="mb-0">{val.first_name} {val.last_name} <small>GR:&nbsp;1</small></h2>
                             </div>
                             <div className="col-auto d-flex align-items-center">
-                                <button>+</button>
+                                <button className="material-icons">add</button>
                             </div>
                         </div>
                         <p className="col-12?">Oc. miesięczna: <span className="color-ranking--3">Poprawna</span> <small>(22.11.2020)</small></p>

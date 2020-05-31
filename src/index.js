@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 
-
-import 'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css'
 import './scss/index.scss';
 import Main from './components/Main'
 import Header from './components/header/Header'
