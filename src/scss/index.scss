@@ -11,6 +11,8 @@ $color-gray: #707070;
 @import 'components/button';
 @import 'components/color-ranking';
 @import 'components/form';
+@import 'components/table';
+@import 'components/modal';
 
 
 @import 'layout/header';
@@ -23,6 +25,10 @@ h1, .h1{
 h2, .h2{
   font-size: 1.4rem;
   color: white;
+}
+
+h3, .h3{
+  font-size: 1.2rem;
 }
 
 small{

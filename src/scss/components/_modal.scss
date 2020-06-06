@@ -1,0 +1,38 @@
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 30px);
+    height: calc(100% - 45px);
+    background: white;
+    box-shadow: 0px 5px 12px 5px rgba(black, 0.4);
+    padding: 0 .5rem;
+    overflow: hidden;
+    h2,h3,p{
+        color: black;
+    }
+    button{
+        border-color: $color-primary;
+        color: $color-primary;
+    }
+    &__head{
+        height: 30%;
+        h3{
+            text-align: center;
+        }
+    }
+
+    &__body{
+        height: 70%;
+        overflow: scroll;
+    }
+
+    &__exit{
+        position: absolute;
+        top: 5px;
+        right: -.5rem;
+        text-align: right;
+    }
+}
+

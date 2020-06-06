@@ -1,0 +1,27 @@
+table{
+    width: 100%;
+    thead{
+        background-color: $color-primary;
+        color: white;
+        tr th{
+            padding: .5rem;
+        }
+    }
+    tbody{
+        tr{
+            &:nth-child(even){
+                background-color: rgba($color-primary, .6);
+            }
+        }
+        td{
+            padding: .5rem;
+        }
+    }
+}
+
+.table-pkt{
+    &__pkt{
+        width: 10%;
+        text-align: center;
+    }
+}
