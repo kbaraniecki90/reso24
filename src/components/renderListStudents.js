@@ -10,11 +10,14 @@ class RenderListStudents extends React.Component {
         this.state = {
             page: 1,
             target: null,
-            list: this.props.osoby.slice(0, 5)
+            list: this.props.osoby.slice(0, 5),
+            query: '',
+            filterStudent: false
         }
 
         document.addEventListener('scroll', () => {this.watchWindow()})
         this.loadMore = this.loadMore.bind(this)
+
     }
 
     watchWindow() { return ((window.pageYOffset + window.outerHeight) >= (document.body.offsetHeight - 100))?  this.loadMore() : null }
@@ -23,7 +26,7 @@ class RenderListStudents extends React.Component {
         this.setState({
             page: page,
             list: this.props.osoby.slice(0, page * 5),
-            modalOpen: false
+            modalOpen: false,
         })
     }
 
@@ -40,10 +43,30 @@ class RenderListStudents extends React.Component {
         })
     }
 
+    filterStudent = (event) => {
+
+        event.persist()
+
+        clearTimeout(this.getFilter)
+        this.getFilter = setTimeout(() => {
+            let query = event.target.value.toLowerCase()
+            this.setState({
+                filterStudent: this.state.list.filter((student) =>
+                student.first_name.toLowerCase().includes(query) ||
+                student.last_name.toLowerCase().includes(query)
+                )
+            })
+        }, 200);
+    }
+
     render() {
+        let list = (this.state.filterStudent && this.state.query)? this.state.filterStudent : this.state.list
         return(
+            <>
+            <StudentSearch list={this.state.list} fn={this.filterStudent}></StudentSearch>
+            <h1>Lista podopiecznych:</h1>
             <section className="liststudents">
-                {this.state.list.map( data =>
+                {list.map( data =>
                     <Student data={data} key={data.id}>
                         {/* <Button idStudent={data.id} TestModal={Modal}/> */}
                         <Button className="material-icons" icon="add" clickFunction={() => this.openModal(data)} />
@@ -53,9 +76,20 @@ class RenderListStudents extends React.Component {
                     <Button clickFunction={this.closeModal} icon="clear"/>
                 </Modal>
             </section>
+            </>
         )
     }
 }
 
 export  { RenderListStudents }
 
+const StudentSearch = (props) =>{
+    return (
+        <div className="mb-1">
+            <div className="searchStudent">
+                <input className="w-100" type="text" placeholder="Szukaj podopiecznego" onChange={props.fn}/>
+                <span className="material-icons searchStudent__icon">search</span>
+            </div>
+        </div>
+    )
+}
