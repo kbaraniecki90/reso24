@@ -1,10 +1,12 @@
 @media only screen and (min-width: 992px) {
-    body{
+    html{
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
         background: radial-gradient(ellipse at top, #b8fbf2, transparent), radial-gradient(ellipse at bottom, #f6f034, transparent);
+        max-height: 100vh;
+        overflow: scroll;
         &::before{
             content: '';
             position: absolute;
@@ -20,7 +22,7 @@
             transform: translateY(6px);
         }
     }
-    #root{
+    body{
         background-color: white;
         border-radius: 20px;
         width: 395px;
@@ -28,6 +30,7 @@
         overflow: scroll;
         overflow-x: hidden;
         position: relative;
+        min-height: auto !important;
     }
 
     .modal{
