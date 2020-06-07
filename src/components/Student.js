@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Ranking } from './Ranking'
+
 const Student = (props) => {
     const data = props.data;
     return (
@@ -15,8 +17,9 @@ const Student = (props) => {
                     {props.children}
                 </div>
             </div>
-            <p className="col-12?">Oc. miesięczna: <span className="color-ranking--3">Poprawna</span> { /* <small>(22.11.2020)</small> */ }</p>
-            <p className="col-12?">Oc. tygodniowa: <span className="color-ranking--5">B. dobra</span> { /* <small>(22.11.2020)</small> */ }</p>
+            {console.log(data)}
+            <p className="col-12?">Oc. miesięczna: <Ranking ranking={data.week_ranking}/> { /* <small>(22.11.2020)</small> */ }</p>
+            <p className="col-12?">Oc. tygodniowa: <Ranking ranking={data.monthly_ranking}/> { /* <small>(22.11.2020)</small> */ }</p>
         </div>
     )
 }

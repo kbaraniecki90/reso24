@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Ranking } from './Ranking'
+
 const Modal = (props) => {
     const targetStudent = props.target
     return (props.open)?
@@ -17,8 +19,8 @@ const Modal = (props) => {
                 </div>
                 <div className="col-12 mt-2">
                     <h4 className="h3">Informacje:</h4>
-                    <p className="col-12?">Oc. miesięczna: <span className="color-ranking--3">Poprawna</span> <small>(22.11.2020)</small></p>
-                    <p className="col-12?">Oc. tygodniowa: <span className="color-ranking--5">B. dobra</span> <small>(22.11.2020)</small></p>
+                    <p className="col-12?">Oc. miesięczna: <Ranking ranking={targetStudent.week_ranking}/> {/* <small>(22.11.2020)</small> */}</p>
+                    <p className="col-12?">Oc. tygodniowa:  <Ranking ranking={targetStudent.monthly_ranking}/> {/* <small>(22.11.2020)</small> */}</p>
                 </div>
             </div>
             <div className="modal__body">
