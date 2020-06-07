@@ -1,0 +1,37 @@
+@media only screen and (min-width: 992px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background: radial-gradient(ellipse at top, #b8fbf2, transparent), radial-gradient(ellipse at bottom, #f6f034, transparent);
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url('https://i.dlpng.com/static/png/934102_preview_preview.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 731px;
+            z-index: -1;
+            transform: translateY(6px);
+        }
+    }
+    #root{
+        background-color: white;
+        border-radius: 20px;
+        width: 395px;
+        height: 770px;
+        overflow: scroll;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    .modal{
+        max-width: 365px;
+        max-height: 750px;
+    }
+}
