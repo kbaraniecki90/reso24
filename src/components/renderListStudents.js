@@ -12,6 +12,7 @@ class RenderListStudents extends React.Component {
             target: null,
             list: this.props.osoby.slice(0, 5),
             query: '',
+            search: false,
             filterStudent: false
         }
 
@@ -51,6 +52,7 @@ class RenderListStudents extends React.Component {
         this.getFilter = setTimeout(() => {
             let query = event.target.value.toLowerCase()
             this.setState({
+                query: query,
                 filterStudent: this.state.list.filter((student) =>
                 student.first_name.toLowerCase().includes(query) ||
                 student.last_name.toLowerCase().includes(query)
@@ -60,7 +62,7 @@ class RenderListStudents extends React.Component {
     }
 
     render() {
-        let list = (this.state.filterStudent && this.state.query)? this.state.filterStudent : this.state.list
+        var list = (this.state.query.length !== 0)? this.state.filterStudent : this.state.list
         return(
             <>
             <StudentSearch list={this.state.list} fn={this.filterStudent}></StudentSearch>
