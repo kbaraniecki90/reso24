@@ -17,7 +17,6 @@ const Student = (props) => {
                     {props.children}
                 </div>
             </div>
-            {console.log(data)}
             <p className="col-12?">Oc. miesięczna: <Ranking ranking={data.week_ranking}/> { /* <small>(22.11.2020)</small> */ }</p>
             <p className="col-12?">Oc. tygodniowa: <Ranking ranking={data.monthly_ranking}/> { /* <small>(22.11.2020)</small> */ }</p>
         </div>

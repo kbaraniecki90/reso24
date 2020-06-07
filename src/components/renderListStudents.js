@@ -10,7 +10,7 @@ class RenderListStudents extends React.Component {
         this.state = {
             page: 1,
             target: null,
-            list: this.props.osoby.slice(0, 5),
+            list: this.props.osoby.slice(0, 10),
             query: '',
             search: false,
             filterStudent: false
@@ -19,6 +19,9 @@ class RenderListStudents extends React.Component {
         document.addEventListener('scroll', () => {this.watchWindow()})
         this.loadMore = this.loadMore.bind(this)
 
+        // Dla prezentacji
+        document.getElementById("moreList").addEventListener("click", () => {this.loadMore()})
+
     }
 
     watchWindow() { return ((window.pageYOffset + window.outerHeight) >= (document.body.offsetHeight - 100))?  this.loadMore() : null }
@@ -26,7 +29,7 @@ class RenderListStudents extends React.Component {
         var page = this.state.page + 1
         this.setState({
             page: page,
-            list: this.props.osoby.slice(0, page * 5),
+            list: this.props.osoby.slice(0, page * 10),
             modalOpen: false,
         })
     }

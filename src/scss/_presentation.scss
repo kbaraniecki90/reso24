@@ -1,12 +1,12 @@
 @media only screen and (min-width: 992px) {
-    html{
+    body{
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
         background: radial-gradient(ellipse at top, #b8fbf2, transparent), radial-gradient(ellipse at bottom, #f6f034, transparent);
-        max-height: 100vh;
-        overflow: scroll;
+        height: 100vh;
+        overflow: hidden;
         &::before{
             content: '';
             position: absolute;
@@ -14,7 +14,7 @@
             left: 0;
             height: 100%;
             width: 100%;
-            background-image: url('https://i.dlpng.com/static/png/934102_preview_preview.png');
+            background-image: url("https://i.dlpng.com/static/png/934102_preview_preview.png");
             background-repeat: no-repeat;
             background-position: center;
             background-size: 731px;
@@ -22,12 +22,12 @@
             transform: translateY(6px);
         }
     }
-    body{
+    #root{
         background-color: white;
         border-radius: 20px;
         width: 395px;
         height: 770px;
-        overflow: scroll;
+        overflow: unset;
         overflow-x: hidden;
         position: relative;
         min-height: auto !important;
@@ -37,4 +37,16 @@
         max-width: 365px;
         max-height: 750px;
     }
+
+    #moreList{
+        border-color: $color-primary;
+        color: $color-primary;
+        border-radius: 10px;
+        display: block !important;
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
+#moreList{
+    display:  none;
 }
