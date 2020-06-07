@@ -15,8 +15,8 @@ const Student = (props) => {
                     {props.children}
                 </div>
             </div>
-            <p className="col-12?">Oc. miesięczna: <span className="color-ranking--3">Poprawna</span> <small>(22.11.2020)</small></p>
-            <p className="col-12?">Oc. tygodniowa: <span className="color-ranking--5">B. dobra</span> <small>(22.11.2020)</small></p>
+            <p className="col-12?">Oc. miesięczna: <span className="color-ranking--3">Poprawna</span> { /* <small>(22.11.2020)</small> */ }</p>
+            <p className="col-12?">Oc. tygodniowa: <span className="color-ranking--5">B. dobra</span> { /* <small>(22.11.2020)</small> */ }</p>
         </div>
     )
 }
