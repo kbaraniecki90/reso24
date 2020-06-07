@@ -5,6 +5,7 @@
         margin-bottom: 1rem;
         border-radius: 5px;
         color: white;
+        // animation: start 2s infinite;
         &:last-child{
             margin-bottom: 0;
         }
@@ -18,3 +19,8 @@
         }
     }
 }
+
+// @keyframes crateCar {
+//     from {transform: scale(0);}
+//     to {transform: scale(1);}
+//   }
